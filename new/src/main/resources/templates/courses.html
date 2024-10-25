@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Courses</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/darkly/bootstrap.min.css" integrity="sha512-yZvLKpkz80eIw9kuFPvIbEeEMBcZqcyIUNun2TWlgBLtPUc50t5t3oeJQmOeCYTJBfOeSky+hhoP/YrHOnf59Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <style>
+    /* Override default styles from Bootstrap Darkly */
+    body {
+      background-color: #343a40; /* Adjust background color for a darker tone */
+    }
+  </style>
+</head>
+<body class="text-white">  <div class="container">
+  <h1 class="text-center mb-5">Courses</h1>  <h2>Add a Course</h2>
+  <form th:action="@{/courses}" method="post">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Course</button>
+  </form>
+</div>
+</body>
+</html>
